@@ -73,5 +73,15 @@
 		"path": "/tokens",
 		"method": "get",
 		"handler": "blockchain.token.getTokens"
-	}
+	},
+{
+    "path": "/messages/add",
+    "method": "put",
+    "handler": "contracts.Message.add"
+},
+{
+    "path": "/messages/list",
+    "method": "get",
+    "handler" : "contracts.Message.list"
+}
 ]

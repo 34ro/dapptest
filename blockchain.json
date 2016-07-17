@@ -106,7 +106,17 @@
 				"alias": "t_t",
 				"on": {
 					"t.id": "t_t.\"transactionId\""
-				}
+				},
+
+{
+    "type": "left outer",
+    "table": "asset_messages",
+    "alias": "tm",
+    "on": {
+          "t.id": "tm.transactionId"
+    }
+}
+
 			}
 		]
 	},
@@ -304,5 +314,23 @@
 				"on_delete": "cascade"
 			}
 		]
-	}
+	},
+
+{
+    "table": "asset_messages",
+    "alias": "tm",
+    "type": "table",
+    "tableFields": [
+        {
+            "name": "message",
+            "type": "String",
+            "length": 320
+        },
+        {
+            "name": "transactionId",
+            "type": "String",
+            "length": 21
+        }
+    ]
+}
 ]
